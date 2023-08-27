@@ -10,7 +10,7 @@
     <link href="http://localhost/encurtadorUrl/laravel/resources/css/app.css" rel="stylesheet">
 </head>
 <body>
-    <main class=".bg-secondary.bg-gradient">        
+    <main class=".bg-secondary.bg-gradient" method ="post">        
         <div class="container_url ">
             <h1 class="h1">Encurtador</h1>
             <p>Seja bem vindo insira uma url</p>           
