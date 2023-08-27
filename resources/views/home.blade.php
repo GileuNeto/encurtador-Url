@@ -1,3 +1,6 @@
+
+<?php require_once ("/Wamp/www/encurtadorUrl/laravel/app/Models/interEncurtador.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +16,7 @@
             <p>Seja bem vindo insira uma url</p>           
             <input id="link" type="text" class="form-control" placeholder="https://www.exemple.com.br" >            
         <div class="d-grid p-2 gap-2 col-6 mx-auto">
-            <button id="encurtador" type="button" class="btn btn-dark">Encurtar</button>  
+            <button id="encurtador" onclick="encurtar" type="button" class="btn btn-dark">Encurtar</button>  
             <button id="copiar" type="button" class="btn btn-success">Copiar</button>
         </div>
         </div>
