@@ -4,7 +4,7 @@ require __DIR__.'/vendor/autoload.php';
 
 use \App\Models\UrlShortener;
 
-$url = 'https://youtube.com';
+$url = 'https://github.com/GileuNeto';
 
 $short = UrlShortener::short($url);
 
