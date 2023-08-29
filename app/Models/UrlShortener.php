@@ -2,8 +2,7 @@
 
 namespace App\Models;
 
-class UrlShortener{
-    
+class UrlShortener{  
     /**
      * @param string $url
      * @return string
@@ -16,9 +15,7 @@ class UrlShortener{
         
         $response = self::send($params);
     
-        echo '<pre>';
-        print_r($response); exit;
-        echo '</pre>';
+        return $response['data']['url'] ?? null;
     }
 
     /**
@@ -38,14 +35,11 @@ class UrlShortener{
             CURLOPT_STDERR => fopen('php://stderr', 'w')  // Saída de erro
         ]);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
-
-        
+ 
         $response = curl_exec($curl);
 
         curl_close($curl);
 
-        return strlen($response) ? json_decode($response) : [];
-        
-    }
-     
+        return strlen($response) ? json_decode($response, true) : [];      
+    }    
 }
