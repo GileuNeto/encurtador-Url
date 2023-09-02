@@ -28,12 +28,35 @@
                     $url = $_POST['url'];
                     $short = UrlShortener::short($url);  
                     
-                    echo "<p id='short-url'>Está é a sua url curta = ".$short."</p>"; 
+                    echo "<p>Está é a sua url curta = <a id='short-url'>".$short."</a></p>"; 
                 }
 
                 ?>
         </div>
     </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        var copyButton = document.getElementById("copiar");
+        var shortUrlElement = document.getElementById("short-url");
+
+        copyButton.addEventListener("click", function () {
+        var range = document.createRange();
+        range.selectNode(shortUrlElement);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+
+        try {
+            document.execCommand("copy");
+            alert("URL curta copiada para a área de transferência!");
+        } catch (error) {
+            console.error("Erro ao copiar: ", error);
+        } finally {
+            window.getSelection().removeAllRanges();
+        }
+    });
+});
+    </script>
+
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>     
 </body>
