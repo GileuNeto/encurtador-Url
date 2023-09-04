@@ -7,7 +7,7 @@
     <link href="http://localhost/encurtadorUrl/laravel/resources/css/app.css" rel="stylesheet">
 </head>
 <body>
-    <main class=".bg-secondary.bg-gradient" >        
+    <main class="" >        
         <div class="container_url">
             <h1 class="h1">Encurtador</h1>
             <p>Seja bem vindo insira uma url</p>  
@@ -28,7 +28,7 @@
                     $url = $_POST['url'];
                     $short = UrlShortener::short($url);  
                     
-                    echo "<p>Está é a sua url curta = <a id='short-url'>".$short."</a></p>"; 
+                    echo "<p id='p-short'>Está é a sua url curta = <a id='short-url'>".$short."</a></p>"; 
                 }
 
                 ?>
