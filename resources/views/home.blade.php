@@ -9,13 +9,13 @@
 <body>
     <main class="" >        
         <div class="container_url">
-            <h1 class="h1">Encurtador</h1>
+            <h1 class="">Encurtador</h1>
             <p>Seja bem vindo insira uma url</p>  
             <form method="POST" action="">
                     <input type="text" name="url" class="form-control" placeholder="https://github.com/GileuNeto">
-                <div class="d-grid p-2 gap-2 col-6 mx-auto">
-                    <button id="encurtar" class="btn btn-dark">Encurtar</button>
-                    <button id="copiar" class="btn btn-success">Copiar</button>
+                <div class="d-grid gap-2 d-md-block p-2">
+                    <button id="encurtar" class="btn btn-outline-dark fw-bolder border-2" >Encurtar</button>
+                    <button id="copiar" class="btn btn-outline-success fw-bolder border-2">Copiar</button>
                 </div>
             </form>  
             <!-- mostra ao usuario sua url curta -->          

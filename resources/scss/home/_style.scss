@@ -1,25 +1,27 @@
 main{
-    background-color: #01012b;
+    background-color: rgb(233, 227, 227);
     margin-top: 10%; 
 }
+
 html{
-    background-color: #01012b;
+    background-color: #e9e3e3;
 }
 .container_url{
     text-align: center;
-    background-color: #01012b;
-    width: 700px;
+    padding-top: 25px;
+    background-color: #96969b;
+    width: 500px;
     height: 300px;
     margin: 0 auto;
+    border-radius: 20pt;
 
     h1{
-        color: #fa7000;
-        
+        color: #080a0a;
         font-weight: bold;
         letter-spacing: 2px; /* Espaçamento entre as letras */
       
     }p{
-        color: #1932ff;;
+        color: #e9e3e3;;
         font-size: large;
         font-weight: 500;
         
